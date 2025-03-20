@@ -13,7 +13,8 @@ Digital forensics involves extracting and analyzing data from digital devices to
 1.Download Autopsy
 - Visit Autopsy Official Website and download the latest version.
 - Double-click the downloaded file and follow the on-screen instructions.
-  ![{660CA88E-DE17-4556-89B5-38945EF3AA31}](https://github.com/user-attachments/assets/d5cf2c90-4fc9-453e-93ff-ef64378dd232)
+  ![image](https://github.com/user-attachments/assets/d1e21009-871f-4bc3-9799-60ece667cae0)
+
 
 
 2.Installation Process
@@ -44,6 +45,7 @@ Download Sleuth Kit from www.sleuthkit.org/sleuthkit/download.php.
 
 Extract and install it manually if needed.
 Add the installation directory to the system PATH for easy command-line access.
+![Screenshot 2025-03-20 115043](https://github.com/user-attachments/assets/6d1b8f6b-9719-470e-b8bb-dce3543e2ff4)
 ## Using Autopsy to Analyze a Disk or Folder
 ### A. Creating a New Case
 1.Open Autopsy and select "Create New Case."
