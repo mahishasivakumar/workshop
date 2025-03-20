@@ -1,106 +1,80 @@
 
-# Digital Forensics Workshop: Using Sleuth Kit & Autopsy
-## 1. Introduction
-Overview of Sleuth Kit (TSK) and Autopsy.
-Use cases: Digital investigations, file recovery, and disk analysis.
-## 2. Installation Guide
-### A. Installing Autopsy (Includes Sleuth Kit)
-Download Autopsy:
-Visit Autopsy Download Page.
-Download the Windows installer.
-Install Autopsy:
-Run the installer and follow instructions.
-### B. Installing Sleuth Kit (Standalone)
-Download Sleuth Kit:
+# Workshop on Digital Forensics
+Installation and Usage of Sleuth Kit & Autopsy
+```
+Register Number: 212222040095
+Name: Mahisha S
+```
+## Introduction
+Digital forensics involves extracting and analyzing data from digital devices to investigate cybercrimes. Sleuth Kit and Autopsy are widely used open-source tools for forensic analysis.
 
-Visit Sleuth Kit Download Page.
-Extract files to a directory.
-Set Up Environment (Optional for CLI Use):
+## Installation Steps
+### A. Installing Sleuth Kit & Autopsy on Windows
+1.Download Autopsy
+- Visit Autopsy Official Website and download the latest version.
+- Double-click the downloaded file and follow the on-screen instructions.
+  ![Screenshot 2025-03-20 113724](https://github.com/user-attachments/assets/cb96e1fc-9f2d-4b6c-9d8e-6e603deabb32)
 
-Add the Sleuth Kit folder to your system PATH to use commands globally.
-## 3. Basic Sleuth Kit Commands
-### A. Identifying File System Type
-```
-sh
-fsstat /path/to/disk/image
-```
-Displays details about the file system (FAT, NTFS, EXT).
-### B. Listing Partitions
-```
-sh
-mmls /path/to/disk/image
-```
-Shows partitions inside a disk image.
-# C. Extracting Partition Data
-```
-sh
-fls -o <sector_offset> /path/to/disk/image
-```
-Lists files in a partition (including deleted files).
-### D. Recovering Deleted Files
-```
-sh
-icat -o <sector_offset> /path/to/disk/image <inode_number> > recovered_file
-```
-Extracts a deleted file using its inode number.
-### E. Viewing File Metadata
-```
-sh
-istat /path/to/disk/image <inode_number>
-```
-Displays metadata of a file, including timestamps.
-### F. Searching for Specific Files
-```
-sh
-find /path/to/disk/image -name "*.txt"
-```
-Finds all .txt files in the image.
-### G. Extracting Strings from a Disk Image
-```
-sh
-strings /path/to/disk/image | grep "keyword"
-```
-Searches for text patterns in the disk image.
-### H. Viewing Master Boot Record (MBR)
-```
-sh
-dd if=/path/to/disk/image bs=512 count=1 | xxd
-```
-Displays the MBR of the disk.
-## 4. Using Autopsy for GUI-Based Analysis
-### A. Launching Autopsy
-Open Autopsy in a web browser.
-Click "Create New Case" and enter details.
+2.Installation Process
+- Launch Autopsy to check if it works correctly.
+   ![Screenshot 2025-03-20 113742](https://github.com/user-attachments/assets/b0afd4a0-d933-4b22-a83d-da397b18320c)
+
+- Choose Directory
+  ![Screenshot 2025-03-20 113742](https://github.com/user-attachments/assets/a617e912-5da0-44b2-aa78-bfe3335c91ca)
+
+- Give install
+  ![Screenshot 2025-03-20 113755](https://github.com/user-attachments/assets/80078b24-50c2-4d69-88fe-79802f361ac0)
+
+  ![Screenshot 2025-03-20 113817](https://github.com/user-attachments/assets/1a04187c-2010-4425-a8b6-9bd2f1745ea3)
+
+
+- Successfully installed
+  ![Screenshot 2025-03-20 113938](https://github.com/user-attachments/assets/f17ca1d6-abcd-4969-aaf1-6ab38ea63a03)
+
+
+- Autopsy Interface
+  ![Screenshot 2025-03-19 222716](https://github.com/user-attachments/assets/3f8dfb03-55b2-4553-8475-de3595a56ff0)
+
+## B. Installing Sleuth Kit Separately (Optional)
+Download Sleuth Kit from www.sleuthkit.org/sleuthkit/download.php.
+![{FAC04ED6-02D9-4D2A-A73C-CDADA79B7939}](https://github.com/user-attachments/assets/216ff656-18eb-497f-a795-3ca4112e758c)
+
+Extract and install it manually if needed.
+Add the installation directory to the system PATH for easy command-line access.
+## Using Autopsy to Analyze a Disk or Folder
+### A. Creating a New Case
+1.Open Autopsy and select "Create New Case."
+2.Enter Case Name, Case Number, and Examiner Name.
+3.Choose a location to save the case files.
 ### B. Adding a Data Source
-Select "Add Data Source".
-Choose:
-Disk Image (E01, VMDK, raw).
-Local Drive (e.g., C:).
-Folder (e.g., C:\Users\Public).
-Click "Start Analysis".
-### C. Investigating Files
-Recover Deleted Files
+1.Click "Add Data Source."
+2.Choose the type of source:
+- Logical Drive (C:\ drive)
+- Specific Folder (C:\Users\Documents\ etc.)
+3.Click Next and select forensic modules like:
+- File Analysis
+- Hash Lookup
+- Keyword Search
+## C. Running the Analysis
+1.Start processing the disk or folder.
+2.Wait for Autopsy to generate reports.
+3.Analyze deleted files, metadata, and hidden data in the results.
+## 4. Using Sleuth Kit from Command Line
+### A. Listing Files in C Drive
+```
+sh
+fls -r C:\
+```
+### B. Extracting File Content
+```
+sh
+icat C:\path\to\file
+```
+### C. Viewing File System Details
+```
+sh
+fsstat C:\
+```
+## 5. Conclusion
+By following these steps, you can install Sleuth Kit & Autopsy and analyze a disk or folder from the C drive. These tools help in digital investigations, allowing forensic experts to recover and analyze digital evidence.
 
-Navigate to File System.
-Look for red-colored (deleted) files.
-Right-click → Extract.
-Keyword Search
-
-Search for terms like "password", "confidential".
-Check User Activity
-
-View Windows Registry, browser history, recent documents.
-## 5. Hands-on Demonstrations
-### Scenario 1: Recovering a Deleted Document
-Use fls and icat in Sleuth Kit.
-Confirm recovery with Autopsy.
-### Scenario 2: Searching for Suspicious Keywords
-Use strings to extract text from raw disk data.
-### Scenario 3: Identifying Recently Accessed Files
-Use istat to check timestamps.
-## 6. Conclusion
-Summary of findings.
-
-Discuss real-world forensic applications.
-
-Q&A session.
