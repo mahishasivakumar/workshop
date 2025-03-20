@@ -86,7 +86,7 @@ Add the installation directory to the system PATH for easy command-line access.
 1.Start processing the disk or folder.
 2.Wait for Autopsy to generate reports.
 3.Analyze deleted files, metadata, and hidden data in the results.
-## 4. Using Sleuth Kit from Command Line
+## Using Sleuth Kit from Command Line
 ### A. Checking sleuthkit version
 ```
 sh
@@ -108,6 +108,6 @@ fls
 ```
 ![Screenshot 2025-03-20 115417](https://github.com/user-attachments/assets/78fc4445-76db-40d0-a64b-2af1e4ccb7ab)
 
-## 5. Conclusion
+## Conclusion
 By following these steps, you can install Sleuth Kit & Autopsy and analyze a disk or folder from the C drive. These tools help in digital investigations, allowing forensic experts to recover and analyze digital evidence.
 
