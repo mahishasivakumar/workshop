@@ -47,19 +47,41 @@ Extract and install it manually if needed.
 Add the installation directory to the system PATH for easy command-line access.
 ![Screenshot 2025-03-20 115043](https://github.com/user-attachments/assets/6d1b8f6b-9719-470e-b8bb-dce3543e2ff4)
 ## Using Autopsy to Analyze a Disk or Folder
-### A. Creating a New Case
-1.Open Autopsy and select "Create New Case."
-2.Enter Case Name, Case Number, and Examiner Name.
-3.Choose a location to save the case files.
-### B. Adding a Data Source
-1.Click "Add Data Source."
-2.Choose the type of source:
-- Logical Drive (C:\ drive)
-- Specific Folder (C:\Users\Documents\ etc.)
-3.Click Next and select forensic modules like:
-- File Analysis
-- Hash Lookup
-- Keyword Search
+## 1.Launch Autopsy and Set Up a New Case:
+
+- Run Autopsy as Administrator.
+
+- Click Create New Case.
+![Screenshot 2025-03-19 222716](https://github.com/user-attachments/assets/4028e969-add1-46c4-beb2-3f336c7dcd3d)
+
+- Enter a case name (e.g., Autopsy1).
+- Select a location for the case folder → Click Next → Finish.
+  ![Screenshot 2025-03-20 101159](https://github.com/user-attachments/assets/96e4d9e3-403b-47e7-985c-48bfd5ee65e8)
+
+- Add optional information
+  ![Screenshot 2025-03-20 101237](https://github.com/user-attachments/assets/97a42cf6-4e45-4bca-9ee0-fc11c6a52b4c)
+
+ ## 2.Add the Partition as Evidence:
+
+- Click Add Data Source → Choose Host.
+   ![Screenshot 2025-03-20 101338](https://github.com/user-attachments/assets/2cae65dd-0d06-43ef-989e-7f07dad19883)
+
+
+
+- Select Local Disk → Click Next.
+   ![Screenshot 2025-03-20 101349](https://github.com/user-attachments/assets/0eafbcca-b430-45c7-9f0c-b6c5254d799b)
+
+
+
+- Choose Disk → Select the VHD drive (Drive1).
+  ![Screenshot 2025-03-20 101605](https://github.com/user-attachments/assets/44d4a210-6c1d-463c-9e0e-fd8b2551bc7c)
+
+
+
+- Click Next → Keep the default settings → Click Finish.
+  ![Screenshot 2025-03-20 101752](https://github.com/user-attachments/assets/ced6643a-ef0b-4de8-b4b6-b9bae1e9ac44)
+
+- Allow Autopsy to process the disk.
 ## C. Running the Analysis
 1.Start processing the disk or folder.
 2.Wait for Autopsy to generate reports.
