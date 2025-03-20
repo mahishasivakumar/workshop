@@ -100,5 +100,7 @@ Use strings to extract text from raw disk data.
 Use istat to check timestamps.
 ## 6. Conclusion
 Summary of findings.
+
 Discuss real-world forensic applications.
+
 Q&A session.
