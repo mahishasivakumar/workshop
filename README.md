@@ -25,7 +25,6 @@ Digital forensics involves extracting and analyzing data from digital devices to
   
 
 - Give install
-- ![Screenshot 2025-03-20 113742](https://github.com/user-attachments/assets/a617e912-5da0-44b2-aa78-bfe3335c91ca)
   ![Screenshot 2025-03-20 113755](https://github.com/user-attachments/assets/80078b24-50c2-4d69-88fe-79802f361ac0)
 
   ![Screenshot 2025-03-20 113817](https://github.com/user-attachments/assets/1a04187c-2010-4425-a8b6-9bd2f1745ea3)
